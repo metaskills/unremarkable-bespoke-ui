@@ -16,10 +16,10 @@ const customInput = async (message) =>
 
 userInput = process.env.UI_BUILD;
 userInput ||= await customInput(
-  "Describe the user interface you want to build.\n↪>"
+  "Describe the user interface you want to build.\n ↪"
 );
 
 while (true) {
   assistantOutput = await assistant.ask(userInput, thread.id);
-  userInput = await customInput(`${assistantOutput}\n↪`);
+  userInput = await customInput(`${assistantOutput}\n ↪`);
 }

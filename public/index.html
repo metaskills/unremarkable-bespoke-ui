@@ -18,19 +18,19 @@
   <!-- Your React code -->
   <script type="text/babel">
     const BespokeUI = () => (
-      <form className="max-w-md mx-auto mt-10 p-6 bg-white shadow-md rounded">
-  <header className="text-2xl font-bold mb-4">Login</header>
-  <div>
-    <div className="mb-4">
-      <div className="mb-2 font-medium">Email</div>
-      <field type="email" placeholder="Enter your email" className="w-full p-2 border border-gray-300 rounded mb-4" />
-    </div>
-    <div className="mb-4">
-      <div className="mb-2 font-medium">Password</div>
-      <field type="password" placeholder="Enter your password" className="w-full p-2 border border-gray-300 rounded mb-4" />
-    </div>
+      <div className="bg-gray-100 p-4 rounded-b-lg">
+  <div className="flex justify-center items-center space-x-1 mt-4">
+    <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-l hover:bg-gray-300">Previous</button>
+    <button className="px-4 py-2 bg-blue-500 text-white">1</button>
+    <button className="px-4 py-2 bg-white text-gray-700 hover:bg-gray-100">2</button>
+    <button className="px-4 py-2 bg-white text-gray-700 hover:bg-gray-100">3</button>
+    <div className="px-4 py-2 text-gray-500">...</div>
+    <button className="px-4 py-2 bg-white text-gray-700 hover:bg-gray-100">8</button>
+    <button className="px-4 py-2 bg-white text-gray-700 hover:bg-gray-100">9</button>
+    <button className="px-4 py-2 bg-white text-gray-700 hover:bg-gray-100">10</button>
+    <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-r hover:bg-gray-300">Next</button>
   </div>
-</form>
+</div>
     );
   </script>
   <script type="text/babel">
