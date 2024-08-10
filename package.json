@@ -1,0 +1,22 @@
+{
+  "name": "unremarkable-bespoke-ui",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "assistant": "node src/index.js",
+    "assistant:debug": "DEBUG=1 node src/index.js"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "experts": "^1.4.2",
+    "open": "^10.1.0",
+    "openai": "^4.55.1",
+    "ws": "^8.18.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "prettier": "3.2.4"
+  }
+}

@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React with Tailwind CSS</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <!-- React and ReactDOM CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- Babel CDN for JSX support in the browser -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Your React code -->
+  <script type="text/babel">
+    const BespokeUI = () => (
+      <form className="max-w-md mx-auto mt-10 p-6 bg-white shadow-md rounded">
+  <header className="text-2xl font-bold mb-4">Login</header>
+  <div>
+    <div className="mb-4">
+      <div className="mb-2 font-medium">Email</div>
+      <field type="email" placeholder="Enter your email" className="w-full p-2 border border-gray-300 rounded mb-4" />
+    </div>
+    <div className="mb-4">
+      <div className="mb-2 font-medium">Password</div>
+      <field type="password" placeholder="Enter your password" className="w-full p-2 border border-gray-300 rounded mb-4" />
+    </div>
+  </div>
+</form>
+    );
+  </script>
+  <script type="text/babel">
+    ReactDOM.render(<BespokeUI />, document.getElementById('root'));
+  </script>
+  <!-- WebSocket refresh script -->
+  <script>
+    const socket = new WebSocket('ws://localhost:8080');
+    socket.onmessage = (event) => {
+      if (event.data === 'refresh') {
+        window.location.reload();
+      }
+    };
+  </script>
+</body>
+</html>
