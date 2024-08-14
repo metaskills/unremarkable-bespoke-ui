@@ -5,6 +5,9 @@ import path from "path";
 import { WebSocketServer } from "ws";
 
 const filePath = path.resolve("public/index.html");
+await fs.access(filePath).catch(async () => {
+  await fs.writeFile(filePath, "");
+});
 let isOpened = false;
 
 const wss = new WebSocketServer({ port: 8080 });
